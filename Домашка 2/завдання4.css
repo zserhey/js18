@@ -1,0 +1,16 @@
+.bg-box {
+    height: 100vh;
+   
+    background: url('https://bakingmischief.com/wp-content/uploads/2017/10/small-batch-peanut-butter-cookies-image-square-3-200x200.jpg')
+            center center no-repeat,
+            url('https://www.freeiconspng.com/uploads/lamp-png-0.png')
+            center top / 50px 80px repeat-x,
+            url('https://www.freeiconspng.com/uploads/grass-png-images-pictures-transparent-28.png')
+            center bottom / 200px 200px repeat-x,
+            url('https://vignette.wikia.nocookie.net/mashaandthebear/images/e/e0/%D0%81%D0%B6%D0%B8%D0%BA.png/revision/latest?cb=20180209130328&path-prefix=ru')
+            left center / 50px 50px repeat-y,
+            url('https://avatanplus.com/files/resources/mid/58eb07b830eab15b56162788.png')
+            right center / 50px 50px repeat-y
+            ;
+    background-color: green;
+}

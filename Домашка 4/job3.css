@@ -1,0 +1,42 @@
+.wrapper {
+    width: 15px;
+    overflow: hidden;
+}
+.wrapper:hover{
+    width: 240px;
+}
+.blok1 {
+    position: relative;
+    width: 15px;
+    height: 240px;
+    background-color: grey;
+    text-align: center;
+    writing-mode: vertical-lr;
+    cursor: pointer;
+}
+.blok2 {
+    position: absolute;
+    top: 0;
+    left: -240px;
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    font-size: 20px;
+    background-color: grey;
+    list-style-image: url("./free-icon-rhombus-12133768.png");
+    list-style-position: inside;
+    transition: left 0.3s linear;
+    }
+.blok2 li {
+    cursor: pointer;
+}
+.blok2 li:not(:last-child) {
+    margin-bottom: 5px;
+}
+.wrapper:hover > .blok2 {
+    left: 0px;
+    transition: left 0.5s linear;
+}
+.color:hover{
+    color: orange;
+}

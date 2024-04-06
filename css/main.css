@@ -1,0 +1,34 @@
+
+q {
+    color: blue;
+}
+ul + p {
+    font-size: 26px;
+}
+a.title {
+    color: orange;
+}
+.list ul li a[title]{ 
+    color: orange;
+}  
+a[href^="https"] {
+    color: #f00;
+}   
+a[title]{
+    border: 1px solid #067b09;
+}
+.text-box > h3:first-child {
+    color: pink;
+}
+#greycol{
+    color: grey;
+}
+.yellow {
+    color: yellow;
+}
+.text-box > div > p {
+    color: red;
+}
+.text-box >p:nth-last-child(2) {
+    color: green;
+}

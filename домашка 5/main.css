@@ -1,0 +1,261 @@
+body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding-inline: 20px;
+  background-color: #d3b714;
+}
+
+.image {
+  height: 40px;
+  border-style: none;
+}
+
+/* приховуємо чекбокс */
+#menu__toggle {
+  opacity: 0;
+  display: none;
+}
+
+/* стилізуємо кнопку */
+.menu__btn {
+  position: relative;
+  display: flex; /* використовуємо flex для центрування вмісту */
+  align-items: center; /* центруємо вміст кнопки */
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* додаємо "гамбургер" */
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #616161;
+}
+
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+
+.menu__list {
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  list-style: none;
+  text-align: center;
+  font-weight: bold;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, height 0.25s ease;
+}
+
+.menu__item {
+  display: inline-block;
+  padding-block: 5px;
+  color: #333;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  transition: background-color 0.4s ease, border 0.4s ease;
+}
+
+.menu__item:hover {
+  border: 1px solid black;
+  background-color: #cfd8dc;
+}
+
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+#menu__toggle:checked ~ .menu__list {
+  position: fixed;
+  width: 100px;
+  height: 25%;
+  margin: 0;
+  padding: 30px 0;
+  list-style: none;
+  text-align: center;
+  opacity: 1;
+  visibility: visible;
+  background-color: #eceff1;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 1000px) {
+  .menu__btn {
+    display: none;
+  }
+
+  #menu__toggle {
+    display: none;
+  }
+
+  .menu__list {
+    position: relative;
+    display: inline-block;
+    visibility: visible;
+    list-style: none;
+    opacity: 1;
+  }
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  transition-duration: 0.25s;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  width: 100%;
+  gap: 10px;
+  font-size: 1.2em;
+  text-align: center;
+  background-color: white;
+}
+
+.div1 {
+  display: none;
+  /* width: 15vw;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    background-color: #c798b9; */
+}
+
+aside > h2 {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+@media (min-width: 1100px) {
+  .div1 {
+    display: flex;
+    width: 15%;
+    padding: 0;
+    margin: 0;
+    background-color: #c798b9;
+  }
+}
+
+.div2 {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  background-color: white;
+}
+
+@media (min-width: 1100px) {
+  .div2 {
+    width: 70%;
+  }
+}
+
+.article {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 10px;
+  margin-bottom: 0.1em;
+}
+
+.img {
+  height: 70px;
+  width: 70px;
+  border-radius: 50% 50%;
+  border: 10px solid #c7b7b7;
+  margin-top: 10px;
+}
+
+.div-element {
+  display: flex;
+  flex-flow: column wrap;
+  flex: 0 1 30%;
+  align-items: center;
+  justify-content: stretch;
+  border: 2px solid grey;
+  border-radius: 30px;
+}
+
+.element-element {
+  flex-grow: 1;
+  font-size: small;
+}
+
+.button {
+  width: 60px;
+  border-radius: 30px;
+  border: 2px solid #685174;
+  margin-bottom: 10px;
+  background-color: #685174;
+  color: white;
+}
+
+.div3 {
+  display: none;
+  /* width: 15vw;
+    display: flex;
+    background-color: #9cb1c7; */
+}
+
+@media (min-width: 1100px) {
+  .div3 {
+    display: flex;
+    width: 15%;
+    padding: 0;
+    margin: 0;
+    background-color: #9cb1c7;
+  }
+}
+
+.footer {
+  height: 30px;
+  background-color: #84e884;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+}

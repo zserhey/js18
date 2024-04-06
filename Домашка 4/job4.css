@@ -1,0 +1,40 @@
+   
+    .div1{
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    animation: myDiv 5s ease-in-out infinite normal both;
+    position: absolute;
+   }
+   @keyframes myDiv{    
+0%  { 
+    top: 0; 
+    left: 0;
+    background-color: blue;
+}
+25%  { 
+    top: calc(100vh - 100px); 
+    left: 0;
+    background-color: blue;
+}
+50%{
+    top: calc(100vh - 100px); 
+    left: calc(100vw - 100px);
+    background-color: green;
+}
+75%{
+    top: 0; 
+    left: calc(100vw - 100px);
+    background-color: yellow;
+}
+  100% { 
+    top: 0; 
+    left: 0;
+    background-color: red;
+}
+   }
+  
+/* .div { 
+  
+ position: absolute;
+} */

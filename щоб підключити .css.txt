@@ -1,0 +1,6 @@
+<head>
+<link mredia="all" rel="stylesheet" href="css/main.css">
+<link mredia="all" rel="stylesheet" href="css/assets.css">
+<link mredia="all" rel="stylesheet" href="css/normolize.css">
+
+</head>
